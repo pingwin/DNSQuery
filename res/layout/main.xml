@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:keepScreenOn="true" android:saveEnabled="true">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:isScrollContainer="true"
+		android:keepScreenOn="true">
+
+		<!-- Query TextView and EditText -->
+		<TextView android:id="@+id/query_pros" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Enter Domain Name:" />
+
+		<EditText android:id="@+id/query" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:autoText="true"
+			android:layout_below="@id/query_pros" android:text="comwired.com"
+			android:saveEnabled="true" android:singleLine="true">
+			<requestFocus />
+		</EditText>
+
+		<!-- QType TextView and Spinner (Align Left) -->
+		<TextView android:id="@+id/qtype_pros" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="Select Query Type:"
+			android:layout_below="@id/query" />
+
+		<Spinner android:id="@+id/qtype" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:drawSelectorOnTop="true"
+			android:prompt="@string/choose_qtype" android:layout_below="@id/qtype_pros"
+			android:saveEnabled="true" android:entries="@+array/rr_types" />
+
+		<!-- Server TextView and Spinner (Align Right) -->
+		<TextView android:id="@+id/server_pros" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="Enter Server To Hit:"
+			android:layout_alignParentRight="true" android:layout_below="@id/query" />
+
+		<Spinner android:id="@+id/server_spinner"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:drawSelectorOnTop="true" android:layout_alignParentRight="true"
+			android:prompt="@string/choose_server" android:layout_below="@id/server_pros" />
+
+		<!-- Direct Server Entry, Below the above two -->
+		<EditText android:id="@+id/server" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:autoText="true"
+			android:layout_below="@id/server_spinner" android:text="8.20.241.1"
+			android:bufferType="normal" android:lines="1"
+			android:scrollHorizontally="false" android:saveEnabled="true"
+			android:selectAllOnFocus="true" />
+
+		<!-- Go Button -->
+		<Button android:id="@+id/go" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_below="@id/server"
+			android:layout_alignParentRight="true" android:layout_marginLeft="10dip"
+			android:text="Go" />
+
+		<!-- Display Results of query -->
+		<TextView android:id="@+id/result_view" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/go"
+			android:scrollbars="vertical" />
+	</RelativeLayout>
+</ScrollView>
+                

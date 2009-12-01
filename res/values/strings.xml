@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, DNSQuery!</string>
+	<string name="app_name">DNS Lookup by Comwired.com</string>
+	<string name="author">Brian Smith brian@comwired.com</string>
+	<string name="choose_qtype">RR Query Type</string>
+	<string name="choose_server">Choose Predefined Server</string>
+	<string name="edit_server_list">Edit Server List</string>
+	<string-array name="rr_types">
+		<item>A</item>
+		<item>MX</item>
+		<item>CNAME</item>
+		<item>PTR</item>
+		<item>SOA</item>
+		<item>ANY</item>
+	</string-array>
+	<string name="display_name">Display Name</string>
+	<string name="address">IPv4 Address</string>
+	<string name="confirm">Confirm</string>
+	<string name="menu_insert">Insert</string>
+	<string name="menu_delete">Delete</string>
+	<integer-array name="rr_types_int">
+		<item>1</item>
+		<item>15</item>
+		<item>5</item>
+		<item>16</item>
+		<item>26</item>
+		<item>65535</item>
+	</integer-array>
+</resources>
